@@ -578,12 +578,110 @@ img {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
+.switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.switch__text {
+  font-size: 12px;
+  color: #fff; }
+
+.switch__btn {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  margin: 0 15px; }
+
+/* Hide default HTML checkbox */
+.switch__btn input {
+  display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2D75A3;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+input:checked + .slider {
+  background-color: #2196F3; }
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+.slider.round {
+  border-radius: 14px; }
+
+.slider.round:before {
+  border-radius: 50%; }
+
 .diagram__bg {
   background: #144C70;
-  padding: 70px 100px 30px 100px; }
+  padding: 20px 100px 30px 100px; }
 
 .diagram__img svg {
   display: block;
-  width: 100%; }
+  width: 100%;
+  margin-top: 25px; }
+
+.detailed .col-7 {
+  background-color: #FCFCFC; }
+
+.detailed {
+  font-size: 18px;
+  margin: 40px; }
+  .detailed h3 {
+    margin-bottom: 40px; }
+
+.technical {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between; }
+
+.technical__title {
+  font-size: 12px;
+  margin-bottom: 15px; }
+
+.technical__data {
+  font-size: 18px;
+  font-weight: bold; }
+
+.comment {
+  font-size: 11px;
+  color: #666666;
+  font-weight: normal; }
+
+.components__title {
+  margin-top: 20px; }
+
+.components__items {
+  font-size: 12px;
+  line-height: 170%; }
+  .components__items .position {
+    color: #181818; }
+  .components__items .data {
+    color: #333; }
+    .components__items .data span {
+      color: #1B6C86; }
 
 /*# sourceMappingURL=main.css.map */
